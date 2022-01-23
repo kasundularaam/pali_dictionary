@@ -8,7 +8,7 @@ import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
 class DatabaseHelper {
-  static const _databaseName = "data.sqlite";
+  static const _databaseName = "data.db";
 
   static const table = 'dictionary_Sheet1';
 
@@ -59,7 +59,6 @@ class DatabaseHelper {
         WordModel wordModel = WordModel.fromMap(result);
         wordModels.add(wordModel);
       }
-      print(wordModels);
       return wordModels;
     } catch (e) {
       throw e.toString();
